@@ -43,10 +43,6 @@
     /* Sections */
     section { padding: 80px 0; }
 
-    /* Skills Progress */
-    .progress { height: 10px; background-color: #222; border-radius: 10px; }
-    .progress-bar { border-radius: 10px; }
-
     /* Project Cards */
     .project-card {
       background: var(--card-bg);
@@ -59,10 +55,40 @@
     .project-card img { height: 220px; object-fit: cover; transition: 0.5s; width: 100%; }
     .project-card:hover img { transform: scale(1.05); }
 
-    /* Testimonials */
+    /* Feature & Testimonial Cards */
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.3s ease;
+    }
+    .feature-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-5px);
+    }
+
     .testimonial-card {
       border-left: 4px solid var(--accent-cyan);
       background: rgba(255, 255, 255, 0.03);
+      border-radius: 0 20px 20px 0;
+      padding: 30px;
+    }
+
+    /* Form Customization */
+    .custom-input {
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      color: #fff !important;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+    .custom-input:focus {
+      border-color: var(--accent-cyan) !important;
+      box-shadow: 0 0 15px rgba(13, 202, 240, 0.2) !important;
+    }
+    .custom-input::placeholder {
+      color: #888;
     }
 
     /* Footer Socials */
@@ -107,6 +133,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto text-uppercase small fw-bold">
             <li class="nav-item"><a href="#skills" class="nav-link px-3">Skills</a></li>
+            <li class="nav-item"><a href="#why-me" class="nav-link px-3">Why Me</a></li>
             <li class="nav-item"><a href="#projects" class="nav-link px-3">Projects</a></li>
             <li class="nav-item"><a href="#testimonials" class="nav-link px-3">Reviews</a></li>
             <li class="nav-item"><a href="#contacts" class="nav-link ps-3 text-info">Contact</a></li>
@@ -141,51 +168,81 @@
           <h2 class="fw-bold">My <span class="text-info">Technical Arsenal</span></h2>
           <div class="mx-auto bg-info" style="height: 3px; width: 60px;"></div>
         </div>
-        <div class="row g-5">
+        <div class="row g-4">
           <div class="col-md-4" data-aos="fade-right">
-            <h5 class="mb-4 text-warning">Frontend Development</h5>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>HTML5 & CSS3</span><span>90%</span></div>
-              <div class="progress"><div class="progress-bar bg-info" style="width: 90%"></div></div>
-            </div>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>JavaScript (ES6+)</span><span>82%</span></div>
-              <div class="progress"><div class="progress-bar bg-info" style="width: 82%"></div></div>
-            </div>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>React.js</span><span>85%</span></div>
-              <div class="progress"><div class="progress-bar bg-info" style="width: 85%"></div></div>
+            <div class="glass-card p-4 h-100">
+              <h5 class="mb-4 text-warning"><i class="fas fa-code me-2"></i>Frontend Development</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">HTML5 & CSS3</span>
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">JavaScript (ES6+)</span>
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">React.js</span>
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">Tailwind CSS</span>
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">Bootstrap</span>
+              </div>
             </div>
           </div>
 
           <div class="col-md-4" data-aos="fade-up">
-            <h5 class="mb-4 text-warning">Backend & Database</h5>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>MySQL / MariaDB</span><span>78%</span></div>
-              <div class="progress"><div class="progress-bar bg-info" style="width: 78%"></div></div>
-            </div>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>Node.js & Express</span><span>75%</span></div>
-              <div class="progress"><div class="progress-bar bg-info" style="width: 75%"></div></div>
+            <div class="glass-card p-4 h-100">
+              <h5 class="mb-4 text-warning"><i class="fas fa-server me-2"></i>Backend & Database</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">Node.js & Express</span>
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">MySQL / MariaDB</span>
+                <span class="badge bg-dark border border-info text-info px-3 py-2 rounded-pill fs-6 fw-normal">RESTful APIs</span>
+              </div>
             </div>
           </div>
 
           <div class="col-md-4" data-aos="fade-left">
-            <h5 class="mb-4 text-warning">Workflow & Design</h5>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>Responsive Design</span><span>88%</span></div>
-              <div class="progress"><div class="progress-bar bg-warning" style="width: 88%"></div></div>
-            </div>
-            <div class="mb-3">
-              <div class="d-flex justify-content-between mb-1"><span>Git & GitHub</span><span>80%</span></div>
-              <div class="progress"><div class="progress-bar bg-warning" style="width: 80%"></div></div>
+            <div class="glass-card p-4 h-100">
+              <h5 class="mb-4 text-warning"><i class="fas fa-tools me-2"></i>Workflow & Design</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-dark border border-warning text-warning px-3 py-2 rounded-pill fs-6 fw-normal">Responsive Design</span>
+                <span class="badge bg-dark border border-warning text-warning px-3 py-2 rounded-pill fs-6 fw-normal">Git & GitHub</span>
+                <span class="badge bg-dark border border-warning text-warning px-3 py-2 rounded-pill fs-6 fw-normal">Netlify Deployment</span>
+                <span class="badge bg-dark border border-warning text-warning px-3 py-2 rounded-pill fs-6 fw-normal">UI/UX Prototyping</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <!-- Why Choose Me Section -->
+    <section id="why-me">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="fw-bold">Why <span class="text-info">Choose Me</span></h2>
+          <p class="text-muted">High-quality web solutions built for scalability, speed, and sales.</p>
+          <div class="mx-auto bg-info" style="height: 3px; width: 60px;"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card h-100">
+              <div class="fs-1 text-info mb-3"><i class="fas fa-bolt"></i></div>
+              <h5 class="fw-bold mb-3">Lightning Fast Performance</h5>
+              <p class="text-muted small mb-0">I write clean, modern code optimized for rapid load times, low latency, and smooth animations across all user devices.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card h-100">
+              <div class="fs-1 text-warning mb-3"><i class="fas fa-mobile-alt"></i></div>
+              <h5 class="fw-bold mb-3">100% Mobile Responsive</h5>
+              <p class="text-muted small mb-0">Every interface is crafted to fit seamlessly on phones, tablets, and desktops with flawless mobile UX.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card h-100">
+              <div class="fs-1 text-info mb-3"><i class="fas fa-bullhorn"></i></div>
+              <h5 class="fw-bold mb-3">Conversion-Focused Design</h5>
+              <p class="text-muted small mb-0">I don't just build pretty layouts; I create user journeys that convert visitors into paying clients for your business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-dark">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
           <h2 class="fw-bold">Latest <span class="text-info">Projects</span></h2>
@@ -245,21 +302,77 @@
       </div>
     </section>
 
+    <!-- Client Reviews Section -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="fw-bold">Client <span class="text-info">Reviews</span></h2>
+          <p class="text-muted">What partners and clients say about my work.</p>
+          <div class="mx-auto bg-info" style="height: 3px; width: 60px;"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="testimonial-card h-100">
+              <div class="text-warning mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="fst-italic text-light mb-4">"Brian delivered our salon platform ahead of schedule. The design is sleek, smooth, and our customers constantly compliment how easy it is to navigate."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="fw-bold text-white">Kerubo Salon Management</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="testimonial-card h-100">
+              <div class="text-warning mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="fst-italic text-light mb-4">"Working with Brian was smooth from start to finish. He turned our consulting site concept into a high-converting corporate portal."</p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="fw-bold text-white">Nelaine-ComfyWear Team</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upgraded Beautiful Contact Form -->
     <section id="contacts" class="bg-dark">
       <div class="container">
-        <div class="glass-card p-5" data-aos="zoom-in">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold">Hire Me <span class="text-info">Today</span></h2>
-            <p class="text-muted">Let's build something extraordinary together.</p>
-          </div>
-          <form action="https://formspree.io/f/mwpdnjzk" method="POST">
-            <div class="row g-4">
-              <div class="col-md-6"><input type="text" name="name" class="form-control bg-dark border-secondary text-white p-3" placeholder="Full Name" required></div>
-              <div class="col-md-6"><input type="email" name="email" class="form-control bg-dark border-secondary text-white p-3" placeholder="Email Address" required></div>
-              <div class="col-12"><textarea name="message" class="form-control bg-dark border-secondary text-white p-3" rows="4" placeholder="Briefly describe your project..." required></textarea></div>
-              <div class="col-12 text-center"><button type="submit" class="btn btn-info btn-glow px-5 py-3 fw-bold rounded-pill">Launch Project</button></div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="zoom-in">
+            <div class="glass-card p-4 p-md-5">
+              <div class="text-center mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center bg-info text-dark rounded-circle mb-3" style="width: 60px; height: 60px;">
+                  <i class="fas fa-paper-plane fs-4"></i>
+                </div>
+                <h2 class="fw-bold">Let's <span class="text-info">Connect</span></h2>
+                <p class="text-muted">Have a project in mind or looking for a developer? Send me a message below.</p>
+              </div>
+              <form action="https://formspree.io/f/mwpdnjzk" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label text-light small fw-bold">Your Name</label>
+                    <input type="text" name="name" class="form-control custom-input p-3" placeholder="e.g. John Doe" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-light small fw-bold">Email Address</label>
+                    <input type="email" name="email" class="form-control custom-input p-3" placeholder="e.g. john@example.com" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label text-light small fw-bold">Project Details</label>
+                    <textarea name="message" class="form-control custom-input p-3" rows="5" placeholder="Tell me about your project goals, timeline, or requirements..." required></textarea>
+                  </div>
+                  <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-info btn-glow px-5 py-3 fw-bold rounded-pill text-dark w-100 w-md-auto">
+                      <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
